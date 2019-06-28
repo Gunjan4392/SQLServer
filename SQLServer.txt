@@ -1,0 +1,1 @@
+SQL Server uses three-valued logic, which can be troublesome for programmers accustomed to the more satisfying two-valued logic (TRUE or FALSE) most programming languages use.  In SQL Server, however, if a column value is NULL, its neither of true neither false. Anything compared to NULL evaluates to the third value in three-valued logic: UNKNOWN.
