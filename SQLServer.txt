@@ -1,1 +1,16 @@
-SQL Server uses three-valued logic, which can be troublesome for programmers accustomed to the more satisfying two-valued logic (TRUE or FALSE) most programming languages use.  In SQL Server, however, if a column value is NULL, its neither of true neither false. Anything compared to NULL evaluates to the third value in three-valued logic: UNKNOWN.
+https://www.toptal.com/sql/interview-questions
+
+*     SQL Server uses three-valued logic, which can be troublesome for programmers accustomed to the more satisfying two-valued logic           (TRUE or FALSE) most programming languages use.  
+      In SQL Server, however, if a column value is NULL, its neither of true neither false. Anything compared to NULL evaluates to the           third value in three-valued logic: UNKNOWN.
+*     UNION is more costly than UNION ALL as UNION gives distinct values betweent two tables where as UNION ALL returns duplicate values         as well.
+
+
+1.    Given a table TBL with a field Nmbr that has rows with the following values: (1, 0, 0, 1, 1). Write a query to add 2 where Nmbr is 0        and add 3 where Nmbr is 1
+A.    update TBL set Nmbr = case when Nmbr = 0 then Nmbr+2 else Nmbr+3 end;
+
+2.    Write a SQL query to find the 10th highest employee salary from an Employee table.
+A.    SELECT TOP (1) Salary FROM 
+        (SELECT DISTINCT TOP (10) Salary FROM Employee ORDER BY Salary DESC) 
+      AS Emp ORDER BY Salary
+
+3.    
