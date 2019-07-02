@@ -13,4 +13,7 @@ A.    SELECT TOP (1) Salary FROM
         (SELECT DISTINCT TOP (10) Salary FROM Employee ORDER BY Salary DESC) 
       AS Emp ORDER BY Salary
 
-3.    
+3.    more than 1 Max Sal in each Department 
+A.     SELECT * FROM (
+            SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT_ID, SALARY, RANK () OVER (PARTITION BY DEPARTMENT_ID ORDER BY SALARY)               SAL_RANK FROM EMPLOYEES)
+        WHERE SAL_RANK <= 2
