@@ -1,0 +1,2 @@
+Print 4th line from file.txt
+sed -n 4p file.txt 
