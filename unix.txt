@@ -1,2 +1,26 @@
 Print 4th line from file.txt
 sed -n 4p file.txt 
+
+Write a command that will allow a UNIX system to shut down in 15 minutes, after which it will perform a reboot.
+/sbin/shutdown –r +15
+
+What command will change your prompt to MYPROMPT
+PS1 = 'MYPROMPT:'
+
+list all the links from a directory
+ls -lrt | grep "^l"
+
+which operating system your system is running on in UNIX
+uname -a
+
+which process is taking how much CPU
+"top" command
+
+how much space left in current drive 
+df -h
+
+In a file word UNIX is appearing many times? How will you count number?
+grep -c "Unix" filename
+
+What is nohup
+nohup is a special command which is used to run process in background, but it is slightly different than & which is normally used for putting a process in background. An UNIX process started with nohup will not stop even if the user who has stared log off from system. While background process started with & will stop as soon as user logoff.
